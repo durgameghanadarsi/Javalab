@@ -1,0 +1,153 @@
+Package 1:
+package currencyconverter;
+import java.util.*;
+public class Currencyconversion{
+	double inr,dollar;
+	double euro,yen;
+	Scanner sc=new Scanner(System.in);
+public void dollartorupee(){
+	System.out.println("Enter dollars:");
+	dollar=sc.nextInt();
+	inr=dollar*67;
+	System.out.println("Dollar to rupees is:"+inr);
+}
+public void rupeetodollar(){
+	System.out.println("Enter Rupee:");
+	inr=sc.nextInt();
+	dollar=inr/67;
+	System.out.println("Rupee to dollars is:"+dollar);
+}
+public void eurotorupee(){
+	System.out.println("Enter euro:");
+	euro=sc.nextInt();
+	inr=euro*79.50;
+	System.out.println("Euro to rupee is:"+inr);
+}
+public void rupeetoeuro(){
+	System.out.println("Enter Rupee:");
+	inr=sc.nextInt();
+	euro=(inr/79.50);
+	System.out.println("Rupee to euro is:"+euro);
+}
+public void yentorupee(){
+	System.out.println("Enter yen:");
+	yen=sc.nextInt();
+	inr=yen*0.61;
+	System.out.println("YEN to rupee is:"+inr);
+}
+public void rupeetoyen(){
+	System.out.println("Enter Rupees:");
+	inr=sc.nextInt();
+	yen=(inr/0.61);
+	System.out.println("rupees to yen is:"+yen);
+}}
+Package 2:
+package distanceconverter;
+import java.util.*;
+public class Distanceconversion
+{
+	double km,m,miles;
+	Scanner sc = new Scanner(System.in);
+public void kmtom(){
+	System.out.print("Enter km:");
+	km=sc.nextDouble();
+	m=(km*1000);
+	System.out.println("kilometer to meter is:"+m);
+}
+public void mtokm(){
+	System.out.print("Ente meter:");
+	m=sc.nextDouble();
+	km=(m/1000);
+	System.out.println("meter to klometer is:"+km);
+}
+public void milestokm(){ 
+	System.out.print("Enter miles:");
+	miles=sc.nextDouble();
+	km=(miles*1.60934);
+	System.out.println("miles to kilometer is:"+km);
+}
+public void kmtomiles(){
+	System.out.print("Enter km:");
+	km=sc.nextDouble();
+	miles=(km*0.621371);
+	System.out.println("kilometer to miles is:"+miles);
+}}
+Package 3:
+package timeconverter;
+import java.util.*;
+public class Timeconversion{
+	int hours,seconds,minutes;
+	Scanner sc = new Scanner(System.in);
+public void secondstohours(){
+	System.out.print("Enter the number of seconds:");
+	seconds= sc.nextInt();
+	hours =seconds/3600;
+	System.out.println("Seconds to hours is:"+hours);
+}
+public void minutestohours(){
+	System.out.print("Enter the number of minutes:");
+	minutes=sc.nextInt();
+	hours=minutes/60;
+	System.out.println("Minutes to seconds is:"+hours);
+}
+public void hourstominutes(){ 
+	System.out.println("enter the no of hours");
+	hours=sc.nextInt();
+	minutes=(hours*60);
+	System.out.println("hours to minutes is:"+minutes);
+}
+public void hourstoseconds(){ 
+	System.out.println("enter the no of hours");
+	hours=sc.nextInt();
+	seconds=(hours*3600);
+	System.out.println("hours to seconds is:"+seconds);
+}}
+Package 4:
+package mypack;
+import java.util.*;
+import currencyconverter.*;
+import distanceconverter.*;import timeconverter.*;
+class Lab10{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int choice;
+Currencyconversion c=new Currencyconversion();
+Distanceconversion d=new Distanceconversion();
+Timeconversion t=new Timeconversion();
+System.out.println("###menu for operations###");
+System.out.println("\n1.dollar to rupee \n2.rupee to dollar\n3.Euro to rupee\n4.rupee to Euro\n5.Yen to rupee\n6.Rupee to Yen\n7.Meter to kilometer\n8.kilometer to meter\n9.Miles  to kilometer\n10.kilometer to miles\n11.Hours to Minutes\n12.Hours to Seconds\n13.Seconds to Hours\n14.Minutes to Hours");
+do{    System.out.println("Enter ur choice");
+	choice=sc.nextInt();
+switch(choice){
+case 1:  c.dollartorupee();
+break;
+case 2: c.rupeetodollar();
+break;
+case 3:c.eurotorupee();
+break;
+case 4: c.rupeetoeuro();
+break;
+case 5: c.yentorupee();
+break;
+case 6 : c.rupeetoyen();
+break;
+case 7  :d.mtokm();
+break;
+case 8  :d.kmtom();
+break;
+case 9  :d.milestokm();
+break;
+case 10  :d.kmtomiles();
+break;
+case 11 :t.hourstominutes();
+break;
+case 12 :t.hourstoseconds();
+break;
+case 13 :t.secondstohours();
+break;
+case 14 : t.minutestohours();
+break;
+}
+}while(choice!=15);
+}
+}
